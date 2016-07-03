@@ -10,10 +10,10 @@ git clone https://github.com/kotelnikov1974/DockerRancherLatestSSL.git
 - перейдите в директорию с переносимым окружением: 
 cd DockerRancherLatestSSL
 
-- запустите команды 
+- запустите команды:
 docker-compose build
 
-- и
+- и:
 docker-compose up -d
 
 - Теперь можно зайти на сервер и проверить доступность interface Rancher, в моем случае:
