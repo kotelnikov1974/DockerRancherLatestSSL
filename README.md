@@ -1,2 +1,2 @@
-# DockerNginxSimpleStaticSite
-Simple Static Site configuration (NGINX) for Docker for testing perso
+# DockerRancherLatestSSL
+Simple DockerRancherLatestSSL for Docker - testing perso
