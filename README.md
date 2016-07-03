@@ -12,10 +12,21 @@ testing perso
 - chmod +x /usr/local/bin/docker-compose
 
 ----------------------------------------------------------------------------
-Запускаем установку:
+Запускаем установку git:
 
 установите git командой:
 - yum install -y git
+
+Создаем локальную папку для скачивания проектов
+mkdir /home/docker-compose
+
+Обьявляем локальную папку локальным репозитарием git
+- git init /home/docker-compose
+
+--------------------------------------------------------------------------
+
+Зайдите в наш локальный репозитарий git
+- cd /home/docker-compose
 
 cохраните подготовленные переносимое окружение на сервер:
 - git clone https://github.com/kotelnikov1974/DockerRancherLatestSSL.git
