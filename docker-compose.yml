@@ -1,8 +1,26 @@
-nginx:
-  image: kotelnikov1974/DockerNginx:latest
+nginx-proxy:
+  image: jwilder/nginx-proxy:latest
   ports:
-  - "80:80"
-  - "443:443"
-volumes:
-    - /etc/nginx/sites-enabled:/etc/nginx/sites-enabled
-  restart: always
+   - 80:80
+   - 443:443
+  volumes:
+    - '/home/user/docker/nginx-proxy/ssl:/etc/nginx/certs:ro'
+    - '/home/user/etc/nginx/vhost.d'
+    - '/home/user/usr/share/nginx/html'
+    - '/home/user/var/run/docker.sock:/tmp/docker.sock:ro'
+letsencrypt-nginx-proxy-companion:
+  image: jrcs/letsencrypt-nginx-proxy-companion:latest
+  volumes_from:
+    - nginx-proxy
+  volumes:
+    - '/home/user/docker/nginx-proxy/ssl:/etc/nginx/certs:rw'
+    - '/home/user/var/run/docker.sock:/var/run/docker.sock:ro'
+rancher-server:
+  image: rancher/server:latest
+  environment:
+    VIRTUAL_PORT: 8080
+    VIRTUAL_HOST: rancher.domain.com
+    LETSENCRYPT_HOST: rancher.domain.com
+    LETSENCRYPT_EMAIL: user@domain.com
+  volumes:
+    - '/home/user/docker/rancher-server/mysql:/var/lib/mysql:rw'
