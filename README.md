@@ -18,7 +18,7 @@ testing perso
 - yum install -y git
 
 Создаем локальную папку для скачивания и хранения проектов
-mkdir /home/docker-compose
+- mkdir /home/docker-compose
 
 --------------------------------------------------------------------------
 
