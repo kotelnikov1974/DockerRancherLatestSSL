@@ -1,5 +1,6 @@
 nginx-proxy:
   image: jwilder/nginx-proxy:latest
+  restart: always
   ports:
    - "80:80"
    - "443:443"
@@ -10,6 +11,7 @@ nginx-proxy:
     - '/var/run/docker.sock:/tmp/docker.sock:ro'
 letsencrypt-nginx-proxy-companion:
   image: jrcs/letsencrypt-nginx-proxy-companion:latest
+  restart: always
   volumes_from:
     - nginx-proxy
   volumes:
@@ -17,6 +19,7 @@ letsencrypt-nginx-proxy-companion:
     - '/var/run/docker.sock:/var/run/docker.sock:ro'
 rancher-server:
   image: rancher/server:latest
+  restart: always
   environment:
     VIRTUAL_PORT: 8080
     VIRTUAL_HOST: srv1.cloud.abcbb.fr
