@@ -1,6 +1,8 @@
-sitename:
-  build: .
+nginx:
+  image: kotelnikov1974/DockerNginx:1.10.1
   ports:
-  - 80:80
-  - 443:443
+  - "80:80"
+  - "443:443"
+volumes:
+    - /etc/nginx/sites-enabled:/etc/nginx/sites-enabled
   restart: always
