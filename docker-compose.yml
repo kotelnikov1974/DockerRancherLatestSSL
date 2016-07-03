@@ -1,5 +1,5 @@
 nginx:
-  image: kotelnikov1974/DockerNginx:1.10.1
+  image: kotelnikov1974/DockerNginx:latest
   ports:
   - "80:80"
   - "443:443"
