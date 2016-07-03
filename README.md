@@ -1,5 +1,18 @@
 # DockerRancherLatestSSL
 - testing perso
+ 
+----------------------------------------------------------------------------
+Подготовка окружения:
+
+- Устанавливаем Docker:
+curl -L https://get.docker.io |sh
+
+- Устанавливаем docker-compose:
+root@rancher-server:~# curl -L https://github.com/docker/compose/releases/download/1.6.2/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+root@rancher-server:~# chmod +x /usr/local/bin/docker-compose
+
+----------------------------------------------------------------------------
+Запускаем установку:
 
 - установите git командой:
 yum install -y git
