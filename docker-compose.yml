@@ -1,4 +1,4 @@
-nginx-proxy:
+NginxProxy:
   image: jwilder/nginx-proxy:latest
   restart: always
   ports:
@@ -9,7 +9,7 @@ nginx-proxy:
     - '/etc/nginx/vhost.d'
     - '/usr/share/nginx/html'
     - '/var/run/docker.sock:/tmp/docker.sock:ro'
-letsencrypt-nginx-proxy-companion:
+LetsencryptNginxProxyCompanion:
   image: jrcs/letsencrypt-nginx-proxy-companion:latest
   restart: always
   volumes_from:
@@ -17,7 +17,7 @@ letsencrypt-nginx-proxy-companion:
   volumes:
     - '/home/docker/nginx-proxy/ssl:/etc/nginx/certs:rw'
     - '/var/run/docker.sock:/var/run/docker.sock:ro'
-rancher-server:
+RancherServer:
   image: rancher/server:latest
   restart: always
   environment:
