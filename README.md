@@ -1,4 +1,4 @@
-# DockerRancherLatestSSL
+# DockerRancherSSL
 testing perso
  
 ----------------------------------------------------------------------------
@@ -24,10 +24,10 @@ testing perso
 - cd /home/docker-compose
 
 cохраняем подготовленные переносимое окружение на сервер:
-- git clone https://github.com/kotelnikov1974/DockerRancherLatestSSL.git
+- git clone https://github.com/kotelnikov1974/DockerRancherSSL.git
 
 перейдим в директорию с переносимым окружением: 
-- cd DockerRancherLatestSSL
+- cd DockerRancherSSL
 
 запускаем команды:
 - docker-compose build
